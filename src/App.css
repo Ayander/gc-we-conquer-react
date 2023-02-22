@@ -37,3 +37,39 @@ nav{
 .menu-item a:hover {
     color: pink;
 }
+.ext-web {
+    padding: 72px 76px;
+
+}
+
+.web-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+.web-item {
+    width: 250px ;
+    background-color: pink;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+
+.card {
+    text-align: center;
+  padding: 10px 20px;
+}
+
+.disable-link {
+    text-decoration: none;
+    color: black;
+}
+
+.web-item img {
+    width: 250px ;
+}
+
+.web-item img:hover {
+    box-shadow: 0 0 10px 1px palevioletred;
+}
