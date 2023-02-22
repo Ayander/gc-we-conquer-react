@@ -7,7 +7,6 @@ function App() {
   return (
    <main>
     <Header/>
-    Home Page
    </main>
   )
 }

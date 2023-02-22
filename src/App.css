@@ -1,0 +1,39 @@
+body {
+    margin:0;
+}
+
+header{
+    padding:9px 76px;
+    border-bottom:5px solid;
+    color: pink;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-logo  {
+    width: 350px;
+    display:block;
+}
+
+.nav-logo img {
+    width: 100%;
+}
+
+.nav-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: black;
+}
+.menu-item a:hover {
+    color: pink;
+}
