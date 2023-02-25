@@ -4,9 +4,9 @@ import WebItem from "./WebItem"
 const ExtWeb = () => {
     return (
         <section class="ext-web">
-        <div class="web-list">
-            <WebItem/>
-        </div>
+            <div class="web-list">
+                <WebItem />
+            </div>
         </section>
     )
 }

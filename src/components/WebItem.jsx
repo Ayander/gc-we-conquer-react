@@ -11,22 +11,22 @@ import MatrixMenImg from "../assets/Images/External Webs/MatrixMen.png"
 const WebItem = () => {
     return (
         <>
-        <div class="web-item">
-            <a href="https://www.masimanyane.org/" class="disable-link">
-                <img src={MasimanyaneImg}alt="Masimanyane" />
+            <div class="web-item">
+                <a href="https://www.masimanyane.org/" class="disable-link">
+                    <img src={MasimanyaneImg} alt="Masimanyane" />
 
-                <div class="card">
-                    <h4>Masimanyane</h4>
-                    <p>We see a society free of gender-based violence where women and children enjoy their full
-                        human rights.To eradicate gender-based violence in order to achieve a healthy, safe, secure,
-                        equal, responsible and supportive society for all women and girls.</p>
-                </div>
-            </a>
-        </div>
+                    <div class="card">
+                        <h4>Masimanyane</h4>
+                        <p>We see a society free of gender-based violence where women and children enjoy their full
+                            human rights.To eradicate gender-based violence in order to achieve a healthy, safe, secure,
+                            equal, responsible and supportive society for all women and girls.</p>
+                    </div>
+                </a>
+            </div>
 
-        <div class="web-item">
+            <div class="web-item">
                 <a href="https://rdsp.org.za/" class="disable-link">
-                    <img src={RuralDevelopmenImg}alt="Rural Development Support Group" />
+                    <img src={RuralDevelopmenImg} alt="Rural Development Support Group" />
 
                     <div class="card">
                         <h4>Rural Development</h4>
@@ -49,7 +49,7 @@ const WebItem = () => {
                         </p>
                     </div>
                 </a>
-            </div> 
+            </div>
 
             <div class="web-item">
                 <a href="https://rapecrisis.org.za/" class="disable-link">
