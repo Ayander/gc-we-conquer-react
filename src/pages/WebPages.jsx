@@ -55,7 +55,7 @@ const WebPages = () => {
         }
     ]
 
-    let currWeb = extweb[+Id]
+    let currWeb = extweb[+id]
 
     return (
         <>
@@ -64,13 +64,11 @@ const WebPages = () => {
                 <div class="web-list">
                     <div class="web-item">
                         <a href="https://www.masimanyane.org/" class="disable-link">
-                            <img src={"Images/External Webs/Masimanyane.png"} alt="Masimanyane" />
+                            <img src={currWeb.WebImg} alt="Masimanyane" />
 
                             <div class="card">
-                                <h4>Masimanyane</h4>
-                                <p>We see a society free of gender-based violence where women and children enjoy their full
-                                    human rights.To eradicate gender-based violence in order to achieve a healthy, safe, secure,
-                                    equal, responsible and supportive society for all women and girls.</p>
+                                <h4>{currWeb.WebName}</h4>
+                                <p>{currWeb.WebInfo}</p>
                             </div>
                         </a>
                     </div>
