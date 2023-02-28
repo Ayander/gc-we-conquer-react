@@ -66,7 +66,7 @@ const ExtWeb = () => {
             <div class="web-list">
                 {
                     extweb.map((extweb, idx) =>{
-                    return (<WebItem key={idx} extweb={extweb}/>)
+                    return (<WebItem key={idx} extweb={extweb} idx={idx}/>)
                     })
                 }
                 

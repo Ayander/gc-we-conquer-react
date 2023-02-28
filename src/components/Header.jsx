@@ -1,16 +1,18 @@
 import React from "react";
 import WebLogo from "../assets/Images/Wee Conquer gif.gif"
+import { Link } from "react-router-dom";
+import Home from "../pages/Home";
 
 const Header = () => {
     return (
         <header>
             <nav>
-                <a href="index.html" className="nav-logo">
+                <Link to={"/Home"} className="nav-logo">
                     <img src={WebLogo} alt="logo"/>
-                </a>
+                </Link>
                 <ul className="nav-menu">
                     <li className="menu-item">
-                        <a href="index.html">Home</a>
+                        <Link {"../pages/Home"}>Home</Link>
                     </li>
                     <li className="menu-item">
                         <a href="About Us.html">About Us</a>

@@ -1,18 +1,19 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 
-const WebItem = ({extweb}) => {
-    console.log(extweb)
+const WebItem = ({extweb, idx}) => {
+    
     return (
             <div className="web-item">
-                <a href="https://www.masimanyane.org/" className="disable-link">
+                <Link to={`/extweb/${idx}`} href= {extweb.WebURL} className="disable-link">
                     <img src={extweb.WebImg} alt={`${extweb.WebName}`} />
 
                     <div className="card">
                         <h4>{extweb.WebName}</h4>
                         <p>{extweb.WebInfo}</p>
                     </div>
-                </a>
+                </Link>
             </div>
     )
 }
