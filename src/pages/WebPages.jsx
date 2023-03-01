@@ -1,6 +1,7 @@
 import React from "react"
-import Header from "../components/Header"
 import { useParams } from "react-router-dom"
+import Header from "../components/Header"
+
 
 import MasimanyaneImg from "../assets/Images/External Webs/Masimanyane.png"
 import RuralDevelopmenImg from "../assets/Images/External Webs/Rural Developmen.png"
@@ -71,9 +72,8 @@ const WebPages = () => {
         <>
             <Header />
             <section className="ext-web">
-                <div className="web-list">
                     <div className="web-wrapper">
-                        <a href="https://www.masimanyane.org/" class="disable-link">
+                        <a href={currWeb.WebURL} classNane="disable-link">
                             <img src={currWeb.WebImg} alt={`${currWeb.WebName}`} />
 
                             <div className="card">
@@ -82,7 +82,6 @@ const WebPages = () => {
                             </div>
                         </a>
                     </div>
-                </div>
             </section>
         </>
     )

@@ -7,21 +7,21 @@ const Header = () => {
     return (
         <header>
             <nav>
-                <Link to={"/Home"} className="nav-logo">
+                <Link to={"/"} className="nav-logo">
                     <img src={WebLogo} alt="logo"/>
                 </Link>
                 <ul className="nav-menu">
                     <li className="menu-item">
-                        <Link {"../pages/Home"}>Home</Link>
+                        <Link to= {"/"}>Home</Link>
                     </li>
                     <li className="menu-item">
                         <a href="About Us.html">About Us</a>
                     </li>
                     <li className="menu-item">
-                        <a href="externalWebsites.html">External websites</a>
+                        <Link to={"/ExternalWebsites/"}>External websites</Link>
                     </li>
                     <li className="menu-item">
-                        <a href="Contacts.html">Contacts</a>
+                    <Link to={"/Contacts/"}>Contact Us</Link>
                     </li>
                     <li className="menu-item">
                         <a href="Donate.html">Donate</a>

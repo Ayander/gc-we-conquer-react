@@ -1,6 +1,7 @@
 import React from "react"
 
 const Form = () => {
+    
     return (
 
         <>
@@ -10,19 +11,19 @@ const Form = () => {
                     <div class="content">
                         <div class="left-side">
                             <div class="address details">
-                            <FontAwesomeIcon icon="fa-solid fa-location-smile" />
+                            <i class="fa-solid fa-location-smile"></i>
                                 <div class="topic">Address</div>
                                 <div class="text-one">Centurion</div>
                                 <div class="text-two">South Africa</div>
                             </div>
                             <div class="phone details">
-                            <FontAwesomeIcon icon="fa-solid fa-phone" />
+                            <i class="fa-solid fa-phone"></i>
                                 <div class="topic">Phone</div>
                                 <div class="text-one">+27603093241</div>
                                 <div class="text-two">+27679881880</div>
                             </div>
                             <div class="email details">
-                            <FontAwesomeIcon icon="fa-solid fa-envelope" />
+                            <i class="fa-solid fa-envelope"></i>
                                 <div class="topic">Email</div>
                                 <div class="text-one">ayandarsibanyoni@gmail.com</div>
 

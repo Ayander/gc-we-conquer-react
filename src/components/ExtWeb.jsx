@@ -62,8 +62,8 @@ const ExtWeb = () => {
         }
     ]
     return (
-        <section class="ext-web">
-            <div class="web-list">
+        <section className="ext-web">
+            <div className="web-list">
                 {
                     extweb.map((extweb, idx) =>{
                     return (<WebItem key={idx} extweb={extweb} idx={idx}/>)

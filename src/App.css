@@ -39,7 +39,6 @@ nav{
 }
 .ext-web {
     padding: 72px 76px;
-
 }
 
 .web-list {
@@ -75,6 +74,7 @@ nav{
 }
 .web-wrapper{
     text-align: center;
+    
 }
 
 /* Google Font CDN Link */
