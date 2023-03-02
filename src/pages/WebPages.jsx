@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Navigate } from "react-router-dom"
 import Header from "../components/Header"
 
 
@@ -15,6 +15,8 @@ import MatrixMenImg from "../assets/Images/External Webs/MatrixMen.png"
 
 const WebPages = () => {
     const { id } = useParams()
+    let [Web, setWebs]=React.useState(20)
+
     const extweb = [
         {
             "WebName": "Masimanyane",
@@ -68,6 +70,14 @@ const WebPages = () => {
 
     let currWeb = extweb[+id]
 
+   if(!currWeb) {
+    return (
+        <>
+        <Navigate to={"/404"}/>
+        </>
+    )
+    }
+
     return (
         <>
             <Header />
@@ -79,6 +89,8 @@ const WebPages = () => {
                             <div className="card">
                                 <h4>{currWeb.WebName}</h4>
                                 <p>{currWeb.WebInfo}</p>
+                                <p className="State">Web: {Web}</p>
+                                <button onAuxClick={() => {setWebs(++Web)}}>Teke Me To Website</button>
                             </div>
                         </a>
                     </div>
