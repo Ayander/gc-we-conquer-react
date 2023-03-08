@@ -84,11 +84,10 @@ nav{
   font-family: "Poppins" , sans-serif;
 }
 .B1{
-  min-height:auto;
   width: 100%;
-  background-image: url(src/assets/Images/a.png);
+  background-image: url(/public/a.png);
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
 }
 .container1{
@@ -154,7 +153,7 @@ nav{
 .right-side .input-box{
   height: 50px;
   width: 100%;
-  margin: 12px 0;
+  margin: 40px 0;
 }
 .right-side .input-box input,
 .right-side .input-box textarea{
@@ -178,7 +177,7 @@ nav{
   display: inline-block;
   margin-top: 12px;
 }
-.right-side .button input[type="button"]{
+.right-side .button input[type="submit"]{
   color: #fff;
   font-size: 18px;
   outline: none;
@@ -189,7 +188,7 @@ nav{
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button input[type="button"]:hover{
+.button input[type="submit"]:hover{
   background: palevioletred;
 }
 
