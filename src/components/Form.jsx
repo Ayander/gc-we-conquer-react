@@ -6,6 +6,20 @@ const mySubmit = (evt) => {
     const form = evt.target
 
     let formData = new FormData(form)
+
+    let extweb = localStorage.extweb
+
+    if(!extweb) {
+        extweb = []
+    }
+
+    let victim = {
+        "Name": formData.get("Name"),
+        "Email": formData.get("Email"),  
+        "Massage": formData.get("Massage") 
+    }
+    console.log(victim)
+
     console.log("Submitting", formData.getAll("Name"))
 }
     return (
@@ -16,7 +30,6 @@ const mySubmit = (evt) => {
                     <div className="content">
                         <div className="left-side">
                             <div className="address details">
-                                <i className="fa-solid fa-location-smile"></i>
                                 <div className="topic">Address</div>
                                 <div classNames="text-one">Centurion</div>
                                 <div className="text-two">South Africa</div>

@@ -85,7 +85,7 @@ nav{
 }
 .B1{
   width: 100%;
-  background-image: url(/public/a.png);
+  background-image: url(/a.png);
   display: flex;
   align-items: baseline;
   justify-content: center;
