@@ -4,11 +4,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #f0f1f8; /* Set a background color for the whole page */
+  background-color: #EAEAEA; /* Set a background color for the whole page */
 }
 
 header {
-  background-color: #fff; /* Set a background color for the header */
+  background-color: #007D7B; /* Set a background color for the header */
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the header */
 }
@@ -37,14 +37,14 @@ nav {
 
 .menu-item a {
   text-decoration: none;
-  color: black;
+  color: #EAEAEA;
   padding: 8px 16px; /* Add some padding to the menu items */
   border-radius: 6px; /* Add a slight border radius to the menu items */
 }
 
 .menu-item a:hover {
-  color: palevioletred;
-  background-color: #f0f0f0; /* Change background color on hover for better feedback */
+  color: #ff5757;
+  background-color: #EAEAEA; /* Change background color on hover for better feedback */
 }
 
 .main-content {
@@ -65,10 +65,9 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("C:\Users\USER 69\OneDrive\Documents\gc-we-conquer-react\public\pink background.jpg");
-  background-size:cover;
-  background-position: center;
-  height: 100vh
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5; /* Light gray background */
 }
 .ext-web {
   padding: 40px 0;
@@ -84,21 +83,22 @@ nav {
 .web-item {
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  overflow: hidden; /* Ensure that the images don't overflow from the cards */
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
   transition: transform 0.2s ease-in-out;
 }
 
+.web-item:hover {
+  transform: translateY(-5px);
+}
 .web-item a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   text-decoration: none;
-  color: #000;
+  color: #ff6b6b;
 }
 
 
@@ -132,7 +132,7 @@ nav {
 
 .web-item .card p {
   font-size: 14px;
-  color: #555;
+  color: #ff6b6b;
 }
 
 .web-list {
@@ -151,24 +151,123 @@ nav {
   }
 }
 
+
+/* ReportForm */
+
+.report-form {
+  padding: 20px 40px 20px 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.report-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6b6b;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  height: 120px;
+}
+
+button[type="submit"] {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*Steps*/
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; 
+}
+
+
+.resources-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.resources-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ff6b6b;
+}
+
+.resources-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.step {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px 2px 30px 2px;
+}
+
+.step h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 16px;
+  color: #555;
+  font-weight: bold
+}
+.resources-section .step img {
+  max-width: 30%; 
+  height: auto;
+}
+
 /*Home*/
 
 .landing-page {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #EAEAEA; 
 }
 
 .hero {
   margin-top: 50px;
-  background-image: url("a.png");
+  background-image: url(Help.png);
   background-size: cover;
   background-position: center;
   height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #007D7B;
 }
 
 .hero-content {
@@ -184,10 +283,11 @@ nav {
   font-size: 18px;
   max-width: 600px;
   margin: 0 auto 30px;
+  color: #A66BBE;
 }
 
 .cta-button {
-  background-color: palevioletred;
+  background-color:#007D7B;
   color: #fff;
   font-size: 18px;
   padding: 12px 24px;
@@ -197,28 +297,47 @@ nav {
 }
 
 .cta-button:hover {
-  background-color: #ff6b9f;
+  background-color: #007D7B;
 }
 
 .features {
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.feature {
+.feature-card {
   text-align: center;
   max-width: 300px;
+  padding: 20px;
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  background-color: #007D7B;
+  color: #f5f5f5;
+}
+
+.feature-card:hover {
+  background-color: #A66BBE /* Light grey background on hover */
+}
+
+.feature-icon {
+  font-size: 40px; /* Adjust the size based on your chosen icons library */
+  margin-bottom: 20px;
 }
 
 .feature h2 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  color: #f5f5f5;
 }
 
 .feature p {
   font-size: 16px;
+  color: #f5f5f5;
 }
+
 
 .cta {
   text-align: center;
@@ -236,6 +355,193 @@ footer {
   padding: 20px 0;
   color: #555;
 }
+.about-us {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  background-color: white;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.about-image {
+  width: 300px; /* Adjust image width as needed */
+  height: 300px; /* Adjust image height as needed */
+  background-image: url("C:\Users\USER 69\OneDrive\Documents\gc-we-conquer-react\src\assets\GP.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 16px;
+}
+
+.counters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-item {
+  text-align: center;
+  margin: 20px;
+}
+
+.counter-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #007D7B; /* Teal color */
+}
+.counter-item {
+  text-align: center;
+  margin: 20px;
+  animation: changeCounter 2s ease-in-out infinite;
+}
+
+@keyframes changeCounter {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.testimonials {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #EAEAEA;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.testimonial {
+  background-color: #fff;
+  border: 1px solid #A66BBE;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.testimonial p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.testimonial .author {
+  font-style: italic;
+  color: #555;
+}
+
+/* Add this CSS for the carousel effect */
+/* ... (other styles) */
+.volunteer-donate h2 {
+  text-align: center;
+}
+
+.volunteer-donate p {
+  text-align: center;
+}
+
+
+.support-options {
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.support-cards-container {
+  display: flex;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Hide default scrollbar */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+.support-cards {
+  display: flex;
+}
+
+.support-card {
+  width: 450px;
+  padding: 20px;
+  margin: 0 30px;
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f3e8ff; /* Light Lavender Color */
+  transition: transform 0.3s ease-in-out; /* Add smooth transform transition */
+}
+
+.selected-card {
+  transform: scale(1.05); /* Slightly zoom in selected card */
+  z-index: 2; /* Bring selected card to the front */
+}
+
+.icon {
+  font-size: 40px; /* Increase icon size */
+  color: #A66BBE; /* Set icon color */
+}
+
+/* Optional: Style for scrollbar (you can customize this) */
+.support-cards-container::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+.support-cards-container::-webkit-scrollbar-thumb {
+  background-color: #007D7B;
+  border-radius: 4px;
+}
+
+.support-cards-container::-webkit-scrollbar-thumb:hover {
+  background-color: #A66BBE;
+}
+
+/* ... (other styles) */
+
+.news {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #EAEAEA;
+}
+.news-item {
+  background-color: #fff;
+  border: 1px solid #A66BBE;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.news-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Add your existing footer styles here */
+
+
 
 
 /* Form.css */
@@ -290,9 +596,6 @@ footer {
   color: #ff6b6b; /* Pink color for the topic text */
 }
 
-p {
-  color: #888;
-}
 
 form {
   margin-top: 20px;
@@ -345,7 +648,6 @@ input[type="submit"]:hover {
 }
 
 
-/*Donate Page*/
 /* Donate.css */
 
 .donate-page {
@@ -370,13 +672,43 @@ input[type="submit"]:hover {
   margin-bottom: 20px;
 }
 
+.thank-you-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50; /* Green color for thank you message */
+  margin-bottom: 20px;
+}
+
 .donation-form {
   width: 100%;
   max-width: 400px;
   background-color: #fff;
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.amount-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.amount-button {
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.amount-button.selected {
+  background-color: #ff6b6b; /* Pink color for selected amount */
 }
 
 .donation-form label {
@@ -386,7 +718,12 @@ input[type="submit"]:hover {
   color: #ff6b6b; /* Pink color for the labels */
 }
 
+/* Donate.css */
+
+/* ... (previous styles) */
+
 .donation-form input[type="text"],
+.donation-form input[type="email"],
 .donation-form input[type="number"],
 .donation-form textarea {
   width: 100%;
@@ -395,6 +732,13 @@ input[type="submit"]:hover {
   border-radius: 5px;
   margin-bottom: 15px;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* Add margin to the top of the button container */
+}
+
 
 .donation-form button {
   background-color: #ff6b6b; /* Pink color for the button */
@@ -406,6 +750,7 @@ input[type="submit"]:hover {
   font-weight: bold;
   font-size: 16px;
   margin-right: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .donation-form button:hover {
@@ -424,4 +769,3 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: center;
 }
-

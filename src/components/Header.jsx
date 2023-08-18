@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import WebLogo from "../assets/Images/Wee Conquer gif.gif";
+import WebLogo from "../assets/Images/Weee Conquer.gif";
 
 const Header = () => {
   return (
