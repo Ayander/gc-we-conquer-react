@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import P1 from "../assets/P1.png";
@@ -11,14 +11,16 @@ const ResourcesSection = () => {
       <p>We understand that dealing with such a distressing situation can be incredibly tough. If you or someone close to you has experienced sexual assault, it's important to know what steps you can take to seek help and support</p>
 
     <div className="carousel-container">
-      <Carousel
-        autoPlay={true}  // Set autoPlay to true
-        interval={5000}  // Set the interval to control transition speed (in milliseconds)
-        infiniteLoop={true}
-        showStatus={false}
-        showArrows={true}
-        showThumbs={false}
-      >
+    <Carousel
+          autoPlay={true}
+          interval={5000}
+          infiniteLoop={true}
+          showStatus={false}
+          showArrows={true}
+          showThumbs={false}
+          selectedItem={0} // Set the initially selected item
+          axis="horizontal" // Set the axis to "horizontal" for 3D effect
+        >
         <div className="step">
           <h3>Step 1: Prioritize Safety</h3>
           <img src={P1} alt="Step 1" />
@@ -71,6 +73,72 @@ const ResourcesSection = () => {
         </div>
       </Carousel>
     </div>
+    </div>
+  );
+};
+
+export default ResourcesSection;*/
+
+
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import P1 from "../assets/P1.png";
+
+
+const ResourcesSection = () => {
+  return (
+    <div className="resources-section">
+      <h2>What to Do If You or Someone You Know Is a Victim of Sexual Assault</h2>
+      <p>We understand that dealing with such a distressing situation can be incredibly tough. If you or someone close to you has experienced sexual assault, it's important to know what steps you can take to seek help and support</p>
+
+      <div className="resources-section">
+        <Carousel
+          autoPlay={false} // Disable autoplay for dragging
+          infiniteLoop={true}
+          showStatus={false}
+          showArrows={true}
+          showThumbs={false}
+          useKeyboardArrows={true} // Enable keyboard navigation
+        >
+          {/* Each slide contains 3 steps */}
+          <div className="step-slide">
+            <div className="step">
+              <h3>Step 1: Prioritize Safety</h3>
+              <img src={P1} alt="Step 1" />
+              <p> If you're in immediate danger or witnessing someone in distress, don't hesitate to call for emergency assistance (10111, 112 or your local emergency number). Your safety is paramount.</p>
+            </div>
+            <div className="step">
+              <h3>Step 2: Seek Prompt Medical Care</h3>
+              <img src={P1} alt="Step 2" />
+              <p>Getting medical attention is essential, even if there are no visible injuries. Medical professionals can address any physical concerns, provide treatment, and help prevent potential health complications.</p>
+            </div>
+            <div className="step">
+              <h3>Step 3: Preserve Potential Evidence</h3>
+              <img src={P1} alt="Step 3" />
+              <p> If you can, avoid changing clothes, showering, or tidying up the area where the assault took place. Gently place any items that might be relevant as evidence, such as clothing, personal belongings, or bedding, into a clean paper bag to help maintain their integrity.</p>
+            </div>
+          </div>
+          
+          <div className="step-slide">
+            <div className="step">
+              <h3>Step 1: Prioritize Safety</h3>
+              <img src={P1} alt="Step 1" />
+              <p> If you're in immediate danger or witnessing someone in distress, don't hesitate to call for emergency assistance (10111, 112 or your local emergency number). Your safety is paramount.</p>
+            </div>
+            <div className="step">
+              <h3>Step 2: Seek Prompt Medical Care</h3>
+              <img src={P1} alt="Step 2" />
+              <p>Getting medical attention is essential, even if there are no visible injuries. Medical professionals can address any physical concerns, provide treatment, and help prevent potential health complications.</p>
+            </div>
+            <div className="step">
+              <h3>Step 3: Preserve Potential Evidence</h3>
+              <img src={P1} alt="Step 3" />
+              <p> If you can, avoid changing clothes, showering, or tidying up the area where the assault took place. Gently place any items that might be relevant as evidence, such as clothing, personal belongings, or bedding, into a clean paper bag to help maintain their integrity.</p>
+            </div>
+          </div>
+        </Carousel>
+      </div>
     </div>
   );
 };

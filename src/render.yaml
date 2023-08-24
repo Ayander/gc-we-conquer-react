@@ -1,0 +1,7 @@
+services:
+  - name: gc-we-conquer-react
+    type: web
+    buildCommand: npm run build
+    environment:
+      - key: NODE_ENV
+        value: production

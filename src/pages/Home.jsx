@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import Header from "../components/Header";
+
+import {Carousel} from '3d-react-carousal';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {
   faPersonHarassing,
@@ -127,29 +129,52 @@ const supportCardsData = [
 ];
 
 const Home = () => {
+
+  const [startIndex, setStartIndex] = useState(0);
+  const numCardsToDisplay = 2; // Number of cards to display at a time
+
+  const handleNext = () => {
+    const newIndex = startIndex + numCardsToDisplay;
+    if (newIndex < supportCardsData.length) {
+      setStartIndex(newIndex);
+    }
+  };
+
+  const handlePrev = () => {
+    const newIndex = startIndex - numCardsToDisplay;
+    if (newIndex >= 0) {
+      setStartIndex(newIndex);
+    }
+  };
   const [selectedCardIndex, setSelectedCardIndex] = useState(0);
+  const [assistedCount, setAssistedCount] = useState(0);
+  const [donationsCount, setDonationsCount] = useState(0);
+
   useEffect(() => {
     // Counter animation logic
     const assistedCounter = document.getElementById("assisted-counter");
     const donationsCounter = document.getElementById("donations-counter");
 
-    let assistedCount = 0;
-    let donationsCount = 0;
-
     const animateCounters = () => {
-      assistedCount++;
-      donationsCount++;
+      if (assistedCount < 974) {
+        // Increment the Assisted Victims counter
+        setAssistedCount((prevCount) => prevCount + 1);
+        assistedCounter.innerText = assistedCount + 1;
+      }
 
-      assistedCounter.innerText = assistedCount;
-      donationsCounter.innerText = donationsCount;
+      if (donationsCount < 523) {
+        // Increment the Donations Made counter
+        setDonationsCount((prevCount) => prevCount + 1);
+        donationsCounter.innerText = donationsCount + 1;
+      }
 
-      if (assistedCount < 523) {
+      if (assistedCount < 974 || donationsCount < 523) {
         requestAnimationFrame(animateCounters);
       }
     };
 
     animateCounters();
-  }, []);
+  }, [assistedCount, donationsCount]);
   return (
     <main>
       <Header />
@@ -211,79 +236,107 @@ const Home = () => {
             <div className="counter-item">
               <h3>Assisted Victims</h3>
               <p className="counter-number" id="assisted-counter">
-                0
+              {assistedCount}
               </p>
             </div>
             <div className="counter-item">
               <h3>Donations Made</h3>
               <p className="counter-number" id="donations-counter">
-                0
+              {donationsCount}
               </p>
             </div>
           </div>
         </section>
 
         <section className="testimonials">
-          <h2>Inspiring Stories</h2>
+          <h1>Testimonials</h1>
           <div className="testimonial-container">
             <div className="testimonial">
               <p>
-                "This organization helped me find my strength again. I'm forever
-                grateful."
+                "This organization helped me find my strength again. I'm grateful beyond words for the  acceptance I've found here."
               </p>
               <p className="author">- Anonymous</p>
             </div>
             <div className="testimonial">
               <p>
-                "I thought I was alone, but this community showed me otherwise.
-                Thank you."
+                "I thought I was alone, This community showed me that strength comes in many forms, and I'm so grateful . "
               </p>
               <p className="author">- Fikile</p>
+            </div>
+            <div className="testimonial">
+              <p>
+                "This website changed everything. It made me feel worthy, showed me I'm not alone, and taught me it's okay to seek help. Thank you!"
+              </p>
+              <p className="author">- James</p>
             </div>
           </div>
         </section>
 
         <section className="volunteer-donate">
-          <h2>Support Our Cause</h2>
-          <p>Make a difference by volunteering or donating.</p>
-          <div className="support-options">
-            <div className="support-cards-container">
-              <div className="support-cards">
-                {supportCardsData.map((card, index) => (
+        <h2>Support Our Cause</h2>
+        <p>Make a difference by volunteering or donating.</p>
+        <div className="support-options">
+          <div className="support-cards-container">
+            {startIndex > 0 && (
+              <button className="carousel-button prev" onClick={handlePrev}>
+                Previous
+              </button>
+            )}
+
+            <div className="support-cards">
+              {supportCardsData
+                .slice(startIndex, startIndex + numCardsToDisplay)
+                .map((card, index) => (
                   <div
                     key={index}
-                    className={`support-card ${
-                      selectedCardIndex === index ? "selected-card" : ""
-                    }`}
-                    onClick={() => setSelectedCardIndex(index)}
+                    className="support-card"
+                    // Your card styling here
                   >
                     <span className="icon">{card.icon}</span>
                     <h3>{card.title}</h3>
                     <p>{card.description}</p>
                   </div>
                 ))}
-              </div>
             </div>
-          </div>
-        </section>
 
-        <section className="news">
-          <h2>News & Updates</h2>
-          <div className="news-items">
-            <div className="news-item">
-              <h3>Webinar: Building Resilience</h3>
-              <p>
-                Join us for a webinar on August 15th to learn about building
-                resilience after trauma.
-              </p>
-            </div>
-            <div className="news-item">
-              <h3>Community Gathering</h3>
-              <p>
-                Our next community gathering will take place on September 5th.
-                Be part of the conversation.
-              </p>
-            </div>
+            {startIndex + numCardsToDisplay < supportCardsData.length && (
+              <button className="carousel-button next" onClick={handleNext}>
+                Next
+              </button>
+            )}
+          </div>
+        </div>
+      </section>
+        <section className="volunteer-form">
+          <div className="volunteer-content">
+            <h2>Join Our Volunteer Team</h2>
+            <p>We are excited to have you join us as a volunteer!</p>
+
+            <form>
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Message (Optional)</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+              </div>
+
+              <button type="submit" className="cta-button">
+                Submit
+              </button>
+            </form>
           </div>
         </section>
 
